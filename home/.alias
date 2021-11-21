@@ -1,0 +1,6 @@
+alias ls='ls --color'
+alias up='sudo pacman -Syyu'
+alias in='sudo pacman -S'
+alias search='pacman -Ss'
+alias remove='sudo pacman -Rns'
+alias ra='ranger'
