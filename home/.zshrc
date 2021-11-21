@@ -40,6 +40,7 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 export CLICOLOR=1
+export SHELL=/usr/bin/zsh
 export EDITOR=/usr/bin/zsh
 source $HOME/.alias
 eval "$(starship init zsh)"
