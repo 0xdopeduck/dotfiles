@@ -42,6 +42,7 @@ zinit light-mode for \
 export CLICOLOR=1
 export SHELL=/usr/bin/zsh
 export EDITOR=/usr/bin/zsh
+export PATH=/home/prat/.local/bin:$PATH
 source $HOME/.alias
 eval "$(starship init zsh)"
 
