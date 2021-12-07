@@ -1,6 +1,4 @@
 lua <<EOF
-require('feline').setup({
-    preset = "noicons"
-})
+require('feline').setup()
 EOF
 
