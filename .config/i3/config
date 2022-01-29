@@ -32,7 +32,8 @@ exec --no-startup-id dex --autostart --environment i3
 # Autostart applications
 #exec --no-startup-id nm-applet
 exec --no-startup-id picom
-exec --no-startup-id cherrytree
+exec --no-startup-id flameshot
+# exec --no-startup-id cherrytree
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
 
 # Use pactl to adjust volume in PulseAudio.
