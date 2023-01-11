@@ -30,11 +30,13 @@ client.background       #d0d0d0
 exec --no-startup-id dex --autostart --environment i3
 
 # Autostart applications
-#exec --no-startup-id nm-applet
 exec --no-startup-id picom
 exec --no-startup-id flameshot
-# exec --no-startup-id cherrytree
+exec --no-startup-id vmware-user-suid-wrapper
 exec_always --no-startup-id feh --bg-fill ~/.config/wall.png
+exec --no-startup-id xrandr --output Virtual1 --primary --mode 1920x976 --pos 0x0 --rotate normal
+exec --no-startup-id autocutsel -fork
+exec --no-startup-id autocutsel -selection PRIMARY -fork
 
 # Use pactl to adjust volume in PulseAudio.
 #set $refresh_i3status killall -SIGUSR1 i3status
@@ -50,8 +52,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+Shift+s exec --no-startup-id sudo poweroff
 bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+b exec --no-startup-id burpsuite
-bindsym $mod+r exec --no-startup-id $term -e /usr/bin/ranger
+bindsym $mod+r exec --no-startup-id $term -e lf
 bindsym $mod+Shift+e exec --no-startup-id thunar
 
 # kill focused window
