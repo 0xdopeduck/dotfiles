@@ -1,6 +1,17 @@
-alias ls='ls --color'
-alias up='sudo pacman -Syyu'
-alias in='sudo pacman -S'
-alias search='pacman -Ss'
-alias remove='sudo pacman -Rns'
+# Package manager
+
+## Archlinux
+#alias up='sudo pacman -Syyu'
+#alias in='sudo pacman -S'
+#alias search='pacman -Ss'
+#alias remove='sudo pacman -Rns'
+
+# APT/Debian
+alias up='sudo apt update && sudo apt upgrade'
+alias in='sudo apt install'
+alias search='apt search'
+alias remove='sudo apt purge'
+
+# Programs
 alias ra='ranger'
+alias ls='ls --color'
