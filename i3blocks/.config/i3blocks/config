@@ -4,12 +4,12 @@ separator_block_width=15
 
 [IP_Address]
 color=#afd700
-command=hostname -i | awk '{ print "IP " $1 }'
+command=ifconfig eth0 | awk '{if(NR==2) print "IP " $2 }'
 interval=once
 
 [VPN_IP_Address]
 color=#ffaf00
-command=hostname -i | awk '{ print "VPN " $2 }'
+command=ifconfig tun0 | awk '{if(NR==2) print "VPN " $2 }'
 interval=10
 
 [date]
