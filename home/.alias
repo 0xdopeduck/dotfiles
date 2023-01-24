@@ -11,7 +11,14 @@ alias up='sudo apt update && sudo apt upgrade'
 alias in='sudo apt install'
 alias search='apt search'
 alias remove='sudo apt purge'
+alias apt-clean='sudo apt autoremove'
 
 # Programs
 alias ra='ranger'
 alias ls='ls --color'
+alias sshprox='ssh -D 9999 -f -N'
+alias prox='proxychains -q'
+
+# Projects
+alias dssh='ssh root@10.10.110.100 -i ~/Projects/Dante/10.10.110.100/ssh_key'
+alias dsshprox='ssh -D 9999 -f -N root@10.10.110.100 -i ~/Projects/Dante/10.10.110.100/ssh_key'
