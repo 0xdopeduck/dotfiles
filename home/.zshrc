@@ -10,6 +10,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 bindkey -v
+
+export PATH=$HOME/toolbox/scripts:$PATH
 # End of lines configured by zsh-newuser-install
 #
 ### Added by Zinit's installer
