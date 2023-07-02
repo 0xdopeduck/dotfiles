@@ -5,6 +5,7 @@ require('kanagawa').setup({
             dragon = {
                 ui = {
                     bg = "none",
+                    bg_gutter = "none",
                 },
             },
         }
