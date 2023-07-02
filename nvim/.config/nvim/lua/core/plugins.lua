@@ -52,7 +52,15 @@ local plugins = {
 
   { 'tpope/vim-fugitive', lazy = true, priority = 5 },
 
-  { 'mbbill/undotree', lazy = true }
+  { 'mbbill/undotree', lazy = true },
+
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    ft = 'neorg',
+    lazy = true
+  }
 
 }
 
