@@ -19,7 +19,7 @@ local plugins = {
   { 'nvim-treesitter/playground', lazy = true },
 
   { 'nvim-telescope/telescope.nvim', tag = '0.1.2',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-media-files.nvim' },
     priority = 90 },
 
   {
@@ -55,11 +55,23 @@ local plugins = {
   { 'mbbill/undotree', lazy = true },
 
   {
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    ft = 'neorg',
-    lazy = true
+    "folke/zen-mode.nvim",
+    --lazy = true,
+    dependencies = "folke/twilight.nvim",
+  },
+
+  {
+    'renerocksai/telekasten.nvim',
+    dependencies = {'nvim-telescope/telescope.nvim', 'renerocksai/calendar-vim'}
+  },
+
+  {
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  init = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+  end,
   }
 
 }
