@@ -1,6 +1,49 @@
 require('telekasten').setup({
-  home = vim.fn.expand("~/SecondBrain"), -- Put the name of your notes directory here
-  image_subdir = "assets",
+  vaults = {
+      cards = {
+          home = vim.fn.expand("/mnt/d/Life_OS/cards"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      books = {
+          home = vim.fn.expand("/mnt/d/Life_OS/sources/Books"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      articals = {
+          home = vim.fn.expand("/mnt/d/Life_OS/sources/Articals"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      courses = {
+          home = vim.fn.expand("/mnt/d/Life_OS/sources/Cources"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      practice = {
+          home = vim.fn.expand("/mnt/d/Life_OS/sources/Practice"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      papers = {
+          home = vim.fn.expand("/mnt/d/Life_OS/sources/Papers"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+      life = {
+          home = vim.fn.expand("/mnt/d/Life_OS/spaces/life"), 
+          image_subdir = "/mnt/d/Life_OS/extras/assets",
+          templates = "/mnt/d/Life_OS/extras/templates",
+      },
+  },
+
+  home = vim.fn.expand("/mnt/d/Life_OS/"), -- Put the name of your notes directory here
+
+  image_subdir = "extras/assets",
+  templates = "extras/templates",
+
+  daily = "calendar/daily",
+  weekly = "calendar/weekly",
 
   extension = ".md",
 

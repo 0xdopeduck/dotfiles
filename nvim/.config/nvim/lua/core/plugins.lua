@@ -72,6 +72,11 @@ local plugins = {
     vim.o.timeout = true
     vim.o.timeoutlen = 300
   end,
+  },
+
+  {
+      "ixru/nvim-markdown",
+      ft = 'markdown',
   }
 
 }

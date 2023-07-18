@@ -6,7 +6,7 @@ vim.opt.nu = true
 vim.opt.rnu = true
 
 vim.opt.colorcolumn = "100"
-vim.opt.wrapmargin = 100
+-- vim.opt.wrapmargin = 100
 vim.opt.cursorline = true
 vim.opt.guicursor = ""
 -- vim.opt.cursorlineopt = "number"
