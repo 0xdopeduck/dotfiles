@@ -1,6 +1,6 @@
 # Use custom format
 format="""
-[┌─<<](bold fg:33)$username@$hostname[>>](bold fg:33) $directory
+[┌─<<](bold fg:33)$username@$hostname[>>](bold fg:33) $directory $git_branch $git_status $nix_shell $python
 [└─](bold fg:33)$character
 """
 
