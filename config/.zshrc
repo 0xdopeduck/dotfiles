@@ -70,6 +70,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 source $HOME/.alias
 source $HOME/.config/zsh/key-bindings.zsh
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 ### FZF Config
 #zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
