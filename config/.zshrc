@@ -68,7 +68,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 
 source $HOME/.alias
-source $HOME/.config/zsh/key-bindings.zsh
+source $HOME/.config/zsh/fzf-key-bindings.zsh
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
