@@ -11,7 +11,7 @@ SAVEHIST=1000
 unsetopt beep
 bindkey -v
 
-export PATH=$HOME/toolbox/scripts:$PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
 # End of lines configured by zsh-newuser-install
 #
 ### Added by Zinit's installer
