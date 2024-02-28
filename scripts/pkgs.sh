@@ -14,7 +14,8 @@ flameshot	\
 htop		\
 xclip		\
 neovim		\
-lsd		
+lsd		\
+python3-virtualenv
 
 ## Starship
 #curl -sS https://starship.rs/install.sh | sh
