@@ -20,6 +20,5 @@ alias nremove='nix-env --uninstall '
 
 # Programs
 alias rr='ranger'
-#alias ls='ls --color'
 alias ls='lsd -a -1'
 

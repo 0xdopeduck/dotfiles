@@ -2,16 +2,18 @@
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+compinit -d $HOME/.zcompdump
+### FZF Completion Config
+#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+
+PROMPT_EOL_MARK=""
+
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 bindkey -v
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
 # End of lines configured by zsh-newuser-install
 #
 ### Added by Zinit's installer
@@ -37,40 +39,12 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust \
     zdharma-continuum/fast-syntax-highlighting \
-    MichaelAquilina/zsh-autoswitch-virtualenv \
     zsh-users/zsh-autosuggestions \
-    zsh-users/zsh-completions
+    zsh-users/zsh-completions \
+    #MichaelAquilina/zsh-autoswitch-virtualenv 
 
 ### End of Zinit's installer chunk
 
-export GENCOMPL_FPATH=$HOME/.zsh/complete
-export CLICOLOR=1
-export SHELL=`which zsh`
-export EDITOR=`which nvim`
-export PATH=/opt/nvim-linux64/bin:$HOME/.local/bin:$PATH
-export FZF_DEFAULT_COMMAND='fdfind -L -H -t d -t l'
-export FZF_DEFAULT_OPTS="--height 60%  --border"
-
-
-export FZF_CTRL_R_OPTS="
-  --preview 'echo {}' --preview-window up:3:hidden:wrap
-  --bind 'ctrl-/:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
-  --color header:italic
-  --header 'Press CTRL-Y to copy command into clipboard'"
-
-export FZF_CTRL_T_OPTS="
-  --preview 'bat -n --color=always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-
-
-export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
-
-
-source $HOME/.alias
-source $HOME/.config/zsh/fzf-key-bindings.zsh
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-### FZF Config
-#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
