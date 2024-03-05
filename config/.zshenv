@@ -1,13 +1,14 @@
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export PATH="$PATH$:$HOME/.local/bin:$HOME/.local/bin/nvim-linux64/bin"
+export PATH="$PATH$:$HOME/.local/bin:$HOME/.local/bin/nvim-linux64/bin:$HOME/.config/tmux/plugins/tmuxifier/bin"
 export CLICOLOR=1
 export SHELL=`which zsh`
 export EDITOR=`which nvim`
 #(find ~/.local/bin -type d | paste -sd ':' -)"
-export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 PROMPT_EOL_MARK=""
+
+export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux/tmux-layouts"
 
 export FZF_DEFAULT_COMMAND='fdfind -L -H -t d -t l'
 export FZF_DEFAULT_OPTS="--height 60%  --border"
