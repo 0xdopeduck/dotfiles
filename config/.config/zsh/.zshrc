@@ -1,4 +1,5 @@
 # The following lines were added by compinstall
+source $HOME/.zshenv
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
@@ -47,4 +48,4 @@ zinit light-mode for \
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
+eval "$(tmuxifier init -)"
