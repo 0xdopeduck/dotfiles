@@ -13,7 +13,6 @@ build-essential	\
 flameshot	\
 htop		\
 xclip		\
-neovim		\
 lsd		\
 python3-virtualenv
 
