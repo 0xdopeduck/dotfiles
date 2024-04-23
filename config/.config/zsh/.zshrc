@@ -75,4 +75,3 @@ zinit light-mode for \
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(tmuxifier init -)"
