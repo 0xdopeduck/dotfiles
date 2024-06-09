@@ -14,6 +14,7 @@ flameshot	\
 htop		\
 xclip		\
 lsd		\
+seclists	\
 python3-virtualenv
 
 ## Starship
