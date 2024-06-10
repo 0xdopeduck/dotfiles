@@ -2,7 +2,7 @@
 
 ## Installing Fonts
 
-mkdir $HOME/.local/share/fonts/
+mkdir -p $HOME/.local/share/fonts/
 rm -rf $HOME/.local/share/fonts/*
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip -O $HOME/.local/share/fonts/JetBrainsMono.zip
