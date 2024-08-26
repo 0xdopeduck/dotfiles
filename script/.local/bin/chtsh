@@ -1,3 +1,4 @@
 #!/bin/bash
 
+#Search cheatsheets
 curl -s https://cht.sh/$1 | less -R
