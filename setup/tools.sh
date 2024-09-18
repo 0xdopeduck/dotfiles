@@ -36,3 +36,10 @@ then
     ((count+=1))
     status="LinkFinder - ${status}"
 fi
+
+if [ $count == 0 ]
+then
+    echo "No packages installed";
+else
+    echo $status
+fi
