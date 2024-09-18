@@ -60,6 +60,7 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit ice lucid wait'0'
+zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 zinit light-mode for \
     Aloxaf/fzf-tab \
     zdharma-continuum/zinit-annex-as-monitor \
@@ -75,3 +76,4 @@ zinit light-mode for \
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
