@@ -37,6 +37,19 @@ then
     status="LinkFinder - ${status}"
 fi
 
+#Installing ysoserial
+if [ ! -d "$HOME/tools/ysoserial" ]
+then
+    git clone https://github.com/frohoff/ysoserial.git $HOME/tools/ysoserial
+    ((count+=1))
+    status="ysoserial - ${status}"
+    pwd=`pwd`
+    cd "$HOME/tools/ysoserial"
+    docker build -t ysoserial .
+    cd $pwd
+fi
+
+
 if [ $count == 0 ]
 then
     echo "No packages installed";
