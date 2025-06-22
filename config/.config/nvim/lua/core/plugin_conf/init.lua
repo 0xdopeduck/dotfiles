@@ -1,8 +1,0 @@
-require("core.plugin_conf.colors")
-require("core.plugin_conf.telescope")
-require("core.plugin_conf.treesitter")
-require("core.plugin_conf.lsp")
-require("core.plugin_conf.zen")
-require("core.plugin_conf.twilight")
-require("core.plugin_conf.telekasten")
-require("core.plugin_conf.which-key")
