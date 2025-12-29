@@ -1,0 +1,69 @@
+/* General styling for the bar */
+* {
+    border: 6;
+    border-radius: 3;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    /* background-color: rgba(26, 27, 38, 0.8); */
+    /* color: #cdd6f4; */
+    background: #1a1b26;
+    color: #c0caf5;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* Styling for each module */
+#workspaces,
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#window {
+    background-color: transparent;
+    padding: 0 10px;
+    margin: 2px 0px;
+}
+
+/* Style for active workspace button */
+#workspaces button.active {
+    /* background-color: #89b4fa; */
+    /* color: #1e1e2e; */
+    border-radius: 10px;
+    background: #7aa2f7;
+    color: #1a1b26;
+}
+
+/* Style for urgent workspace button (e.g., a notification) */
+#workspaces button.urgent {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    border-radius: 10px;
+}
+
+/* Tooltip styling */
+tooltip {
+    background: #1e1e2e;
+    border: 1px solid #89b4fa;
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+}
+
+/* Different colors for battery states */
+#battery.charging, #battery.plugged {
+    color: #a6e3a1; /* Green */
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8; /* Red */
+}
+

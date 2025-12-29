@@ -1,0 +1,44 @@
+/* Global text only */
+* {
+  color: #c0caf5;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+}
+
+/* Fullscreen backdrop */
+window {
+  background-color: rgba(26, 27, 38, 0.92);
+}
+
+/* Button container */
+button {
+  background-color: #24283b;
+  border-radius: 18px;
+  border: 2px solid #7aa2f7;
+
+  margin: 20px;
+  padding: 32px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Hover */
+button:hover {
+  background-color: #7aa2f7;
+  color: #1a1b26;
+}
+
+/* Focus (keyboard navigation) */
+button:focus {
+  border-color: #bb9af7;
+}
+
+/* Remove inner GTK artifacts */
+button * {
+  background-color: transparent;
+}
+
+/* Optional: smoother look */
+button label {
+  font-weight: 600;
+}
