@@ -90,6 +90,6 @@
       "tooltip": true,
       "on-click": "blueman-manager",
       "on-right-click": "bluetoothctl power off || bluetoothctl power on"
-    }
+    },
 }
 

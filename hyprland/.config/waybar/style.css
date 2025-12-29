@@ -66,4 +66,3 @@ tooltip label {
 #battery.critical:not(.charging) {
     color: #f38ba8; /* Red */
 }
-
