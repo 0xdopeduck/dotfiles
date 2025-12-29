@@ -1,0 +1,19 @@
+# Global properties
+separator=true
+separator_block_width=15
+
+[IP_Address]
+color=#afd700
+command=ifconfig eth0 | awk '{if(NR==2) print "IP " $2 }'
+interval=once
+
+[VPN_IP_Address]
+color=#ffaf00
+command=ifconfig tun0 | awk '{if(NR==2) print "VPN " $2 }'
+interval=10
+
+[date]
+color=#5fafd7
+command=date '+%a %d %b %I:%M %p '
+interval=50
+
