@@ -9,17 +9,17 @@ return {
     config = function()
         require("telekasten").setup({
 
-            home = vim.fn.expand("~/Notes/zettelkasten"),
-            dailies = vim.fn.expand("~/Notes/daily"),
-            weeklies = vim.fn.expand("~/Notes/weekly"),
-            monthlies = vim.fn.expand("~/Notes/monthly"),
-            quarterlies = vim.fn.expand("~/Notes/quarterly"),
-            yearlies = vim.fn.expand("~/Notes/yearly"),
-            templates = vim.fn.expand("~/Notes/templates"),
+            home = vim.fn.expand("~/Resources/Notes/zettelkasten"),
+            dailies = vim.fn.expand("~/Resources/Notes/daily"),
+            weeklies = vim.fn.expand("~/Resources/Notes/weekly"),
+            monthlies = vim.fn.expand("~/Resources/Notes/monthly"),
+            quarterlies = vim.fn.expand("~/Resources/Notes/quarterly"),
+            yearlies = vim.fn.expand("~/Resources/Notes/yearly"),
+            templates = vim.fn.expand("~/Resources/Notes/templates"),
 
             -- Specific note templates
               -- set to `nil` or do not specify if you do not want a template
-            template_new_note = '~/Notes/templates/new-note.md',      -- template for new notes
+            template_new_note = '~/Resources/Notes/templates/new-note.md',      -- template for new notes
             -- template_new_daily = '/path/to/file',     -- template for new daily notes
             -- template_new_weekly = '/path/to/file',    -- template for new weekly notes
             -- template_new_monthly = '/path/to/file',   -- template for new monthly notes
@@ -129,7 +129,7 @@ return {
             -- vaults = {
             --   personal = {
             --     -- configuration for personal vault. E.g.:
-            --     home = vim.fn.expand("~/Notes/zettlekasten"),
+            --     home = vim.fn.expand("~/Resources/Notes/zettlekasten"),
             --   }
             -- },
             
