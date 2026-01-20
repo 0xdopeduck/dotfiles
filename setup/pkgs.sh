@@ -2,20 +2,15 @@
 
 # Install Packages
 
-sudo apt install -y stow \
-fd-find 	\
+# sudo apt install -y stow \
+sudo pacman -Sy stow \
+fd \
 fzf		\
 ripgrep		\
 zoxide		\
-unar		\
 jq		\
-build-essential	\
-flameshot	\
 htop		\
-xclip		\
 lsd		\
-seclists	\
-python3-virtualenv
 
 ## Starship
 #curl -sS https://starship.rs/install.sh | sh
