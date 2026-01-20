@@ -1,17 +1,21 @@
 # Package manager
 
 ## Archlinux
-#alias up='sudo pacman -Syyu'
-#alias in='sudo pacman -S'
-#alias search='pacman -Ss'
-#alias remove='sudo pacman -Rns'
+alias up='sudo pacman -Syyu'
+alias in='sudo pacman -S'
+alias search='pacman -Ss'
+alias remove='sudo pacman -Rns'
 
 # APT/Debian
-alias up='sudo apt update && sudo apt upgrade'
-alias in='sudo apt install'
-alias search='apt search'
-alias remove='sudo apt purge'
-alias apt-clean='sudo apt autoremove'
+# alias up='sudo apt update && sudo apt upgrade'
+# alias in='sudo apt install'
+# alias search='apt search'
+# alias remove='sudo apt purge'
+# alias apt-clean='sudo apt autoremove'
+
+# Febora Atomic
+alias darch='distrobox enter arch'
+alias dsec='distrobox enter sec'
 
 # NixOS
 alias nin='nix-env -iA '

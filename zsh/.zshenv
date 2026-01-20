@@ -5,7 +5,7 @@ fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-#export PATH="$PATH$:$HOME/go/bin:$HOME/.local/bin:$HOME/.local/bin/nvim-linux64/bin"
+export PATH="$PATH:$HOME/.local/bin"
 #export CLICOLOR=1
 #export SHELL=`which zsh`
 #export EDITOR=`which nvim`

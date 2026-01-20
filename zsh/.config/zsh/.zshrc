@@ -63,6 +63,7 @@ zinit ice lucid wait'0'
 # zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 zinit light-mode for \
     Aloxaf/fzf-tab \
+    sindresorhus/pure \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
@@ -74,6 +75,6 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 # export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
