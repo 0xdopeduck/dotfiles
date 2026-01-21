@@ -14,8 +14,7 @@ alias remove='sudo pacman -Rns'
 # alias apt-clean='sudo apt autoremove'
 
 # Febora Atomic
-alias darch='distrobox enter arch'
-alias dsec='distrobox enter sec'
+alias de='distrobox enter'
 
 # NixOS
 alias nin='nix-env -iA '
@@ -25,4 +24,5 @@ alias nremove='nix-env --uninstall '
 # Programs
 alias rr='ranger'
 alias ls='lsd -1'
+alias k='kubectl'
 
