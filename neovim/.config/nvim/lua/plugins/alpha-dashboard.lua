@@ -19,7 +19,7 @@ return {
         dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
         dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
         dashboard.button("s", "  Session restore", ":SessionRestore<CR>"),
-        dashboard.button("e", "  New Note", ":Telekasten new_note"),
+        dashboard.button("n", "  New Note", ":Telekasten new_note"),
         dashboard.button("q", "  Quit", ":qa<CR>"),
       }
 
