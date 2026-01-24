@@ -12,7 +12,8 @@ theme = TokyoNight Storm
 ## Font Settings
 # Set the font family. The specified font must be installed on your system[3].
 # Values can be quoted or unquoted[1].
-font-family = "FiraCode Nerd Font"
+# font-family = "FiraCode Nerd Font"
+font-family = "NerdFonts Fantasque Sans Mono"
 
 # Set the font size. The default is 13[3].
 font-size = 14
