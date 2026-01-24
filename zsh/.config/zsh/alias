@@ -1,25 +1,25 @@
 # Package manager
 
 ## Archlinux
-alias up='sudo pacman -Syyu'
-alias in='sudo pacman -S'
-alias search='pacman -Ss'
-alias remove='sudo pacman -Rns'
+alias aup='sudo pacman -Syyu'
+alias ain='sudo pacman -S'
+alias asearch='pacman -Ss'
+alias aremove='sudo pacman -Rns'
 
 # APT/Debian
-# alias up='sudo apt update && sudo apt upgrade'
-# alias in='sudo apt install'
-# alias search='apt search'
-# alias remove='sudo apt purge'
-# alias apt-clean='sudo apt autoremove'
+alias dup='sudo apt update && sudo apt upgrade'
+alias din='sudo apt install'
+alias dsearch='apt search'
+alias dremove='sudo apt purge'
 
-# Febora Atomic
+# distrobox
 alias de='distrobox enter'
 
 # NixOS
-alias nin='nix-env -iA '
-alias nsearch='nix-env --query --available --attr-path'
-alias nremove='nix-env --uninstall '
+alias nin ='nix-env -iA '
+alias nsearch ='nix-env --query --available --attr-path'
+alias nremove ='nix-env --uninstall '
+alias rebuild ='sudo nixos-rebuild switch --flake /etc/nixos#nixos'
 
 # Programs
 alias rr='ranger'
