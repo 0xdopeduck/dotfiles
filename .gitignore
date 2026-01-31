@@ -1,2 +1,4 @@
 tmux/.config/tmux/plugins/*
 zsh/.config/zsh/.zcompdump
+ghostty/.config/ghostty/themes/
+hyprland/.config/hypr/noctalia/
