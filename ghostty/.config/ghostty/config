@@ -3,7 +3,7 @@
 ## Theme Settings
 # Set the color theme for the terminal. Ghostty ships with hundreds of built-in themes[2].
 # This sets the theme to Tokyo Night (dark variant)[5].
-theme = TokyoNight Storm
+theme = noctalia
 
 # You can also specify separate themes for your system's light and dark modes[2][5].
 # To do this, uncomment the following line:
