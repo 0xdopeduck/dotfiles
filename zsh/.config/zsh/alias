@@ -16,10 +16,11 @@ alias dremove='sudo apt purge'
 alias de='distrobox enter'
 
 # NixOS
-alias nin ='nix-env -iA '
-alias nsearch ='nix-env --query --available --attr-path'
-alias nremove ='nix-env --uninstall '
-alias rebuild ='sudo nixos-rebuild switch --flake /etc/nixos#nixos'
+alias nin='nix-env -iA '
+alias nsearch='nix-env --query --available --attr-path'
+alias nremove='nix-env --uninstall '
+alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#nixos'
+alias ngc='nix-collect-garbage -d'
 
 # Programs
 alias rr='ranger'
