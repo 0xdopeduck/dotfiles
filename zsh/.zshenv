@@ -7,6 +7,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export PATH="$PATH:$HOME/.local/bin"
 export CLICOLOR=1
+export TERM=xterm-256color
 export SHELL=`which zsh`
 export EDITOR=`which nvim`
 #(find ~/.local/bin -type d | paste -sd ':' -)"
