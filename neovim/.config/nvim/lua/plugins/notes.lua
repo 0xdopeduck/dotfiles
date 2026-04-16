@@ -7,19 +7,22 @@ return {
     },
       -- Main paths
     config = function()
+        -- Read notes directory from environment variable, fallback to default
+        local note_dir = vim.env.NOTE_DIR or "~/Resources/Notes"
+
         require("telekasten").setup({
 
-            home = vim.fn.expand("~/Resources/Notes/zettelkasten"),
-            dailies = vim.fn.expand("~/Resources/Notes/daily"),
-            weeklies = vim.fn.expand("~/Resources/Notes/weekly"),
-            monthlies = vim.fn.expand("~/Resources/Notes/monthly"),
-            quarterlies = vim.fn.expand("~/Resources/Notes/quarterly"),
-            yearlies = vim.fn.expand("~/Resources/Notes/yearly"),
-            templates = vim.fn.expand("~/Resources/Notes/templates"),
+            home = vim.fn.expand(note_dir .. "/zettelkasten"),
+            dailies = vim.fn.expand(note_dir .. "/daily"),
+            weeklies = vim.fn.expand(note_dir .. "/weekly"),
+            monthlies = vim.fn.expand(note_dir .. "/monthly"),
+            quarterlies = vim.fn.expand(note_dir .. "/quarterly"),
+            yearlies = vim.fn.expand(note_dir .. "/yearly"),
+            templates = vim.fn.expand(note_dir .. "/templates"),
 
             -- Specific note templates
               -- set to `nil` or do not specify if you do not want a template
-            template_new_note = '~/Resources/Notes/templates/new-note.md',      -- template for new notes
+            template_new_note = note_dir .. '/templates/new-note.md',      -- template for new notes
             -- template_new_daily = '/path/to/file',     -- template for new daily notes
             -- template_new_weekly = '/path/to/file',    -- template for new weekly notes
             -- template_new_monthly = '/path/to/file',   -- template for new monthly notes
