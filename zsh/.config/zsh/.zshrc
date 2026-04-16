@@ -4,6 +4,10 @@ zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit -d $HOME/.zcompdump
+
+# Show hidden files in tab completion
+_comp_options+=(globdots)
+
 ### FZF Completion Config
 #zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
@@ -17,29 +21,6 @@ bindkey -v
 
 # Remove mode switching delay.
 KEYTIMEOUT=5
-
-# Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
-
-# Use beam shape cursor on startup.
-echo -ne '\e[5 q'
-
-# Use beam shape cursor for each new prompt.
-preexec() {
-   echo -ne '\e[5 q'
-}
 
 
 # End of lines configured by zsh-newuser-install
@@ -77,4 +58,11 @@ zinit light-mode for \
 
 # eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)" 
+fi
 # export AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
+
+# opencode
+export PATH=/Users/prat/.opencode/bin:$PATH

@@ -6,6 +6,7 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export PATH="$PATH:$HOME/.local/bin"
+export NOTE_DIR="~/Documents/Resources/Notes"
 export CLICOLOR=1
 export TERM=xterm-256color
 export SHELL=`which zsh`
@@ -15,8 +16,13 @@ PROMPT_EOL_MARK=""
 
 #export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux/tmux-layouts"
 
-export FZF_DEFAULT_COMMAND='fdfind -L -H -t d -t l'
+export FZF_DEFAULT_COMMAND='fd -L -H -t d -t l -t f -t x --hidden --exclude .git'
 export FZF_DEFAULT_OPTS="--height 60%  --border"
+
+# Key bindings - show hidden files
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd -L -H -t d --hidden --exclude .git'
+
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
@@ -30,3 +36,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 source $HOME/.config/zsh/alias
 source $HOME/.config/zsh/fzf-key-bindings.zsh
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
