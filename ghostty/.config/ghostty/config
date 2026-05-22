@@ -40,3 +40,4 @@ cursor-style = block
 cursor-style-blink = false
 cursor-invert-fg-bg = true
 macos-option-as-alt = true
+# macos-titlebar-style = hidden
