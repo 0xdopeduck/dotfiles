@@ -6,6 +6,7 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export NOTE_DIR="~/Documents/Resources/Notes"
 export CLICOLOR=1
 export TERM=xterm-256color
