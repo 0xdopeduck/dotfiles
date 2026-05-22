@@ -10,3 +10,21 @@ vim.opt.smarttab = true
 vim.opt.updatetime = 250
 vim.opt.breakindent = true
 vim.opt.signcolumn = "yes:1"
+vim.opt.completeopt = {
+    "menu",
+    "menuone",
+    "popup",
+    "fuzzy",
+    "noselect",
+}
+
+
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = "●",
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
