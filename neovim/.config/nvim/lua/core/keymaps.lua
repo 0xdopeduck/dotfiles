@@ -13,6 +13,47 @@ map("n", "<leader>ww", "<cmd>w<cr>", { desc = "Save File" })
 map("n", "<leader>wq", "<cmd>wq<cr>", { desc = "Save File and Quit" })
 map("n", "<leader>qq", "<cmd>q!<cr>", { desc = "Quite without Saving" })
 
+-- LSP format code
+map("n", "<leader>ff", vim.lsp.buf.format, { desc = "Format code with LSP" })
+
+-- Tab completion
+vim.keymap.set(
+    "i",
+    "<Tab>",
+    function()
+        local pum_visible =
+            vim.fn.pumvisible()
+
+        if pum_visible == 1 then
+            return "<C-n>"
+        end
+
+        return "<Tab>"
+    end,
+
+    {
+        expr = true
+    }
+)
+
+vim.keymap.set(
+    "i",
+    "<S-Tab>",
+    function()
+        local pum_visible =
+            vim.fn.pumvisible()
+
+        if pum_visible == 1 then
+            return "<C-p>"
+        end
+
+        return "<S-Tab>"
+    end,
+
+    {
+        expr = true
+    }
+)
 -- Move Winodes
 -- map("n", "<leader>hh", "<C-w>h", { desc = "Move Left" })
 -- map("n", "<leader>jj", "<C-w>j", { desc = "Move Down" })
