@@ -1,8 +1,12 @@
+require("vim._core.ui2").enable({})
 require("core.options")
 require("core.keymaps")
 require("core.autocmd")
+require("core.commands")
 
 require("plugins.telescope")
 require("plugins.theme")
 require("plugins.lsp")
 require("plugins.tree-sitter")
+require("plugins.oil")
+require("plugins.gitsign")
