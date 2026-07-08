@@ -13,3 +13,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spelllang = "en"
   end,
 })
+
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+  end,
+})
+

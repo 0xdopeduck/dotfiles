@@ -2,6 +2,8 @@ vim.pack.add {
     "https://github.com/neovim/nvim-lspconfig"
 }
 
+-- Note
+-- Please add any lsp added here to the blink_cmp.lua file to get autocomplete
 -- Enable in-line diagnostic messages
 vim.diagnostic.config({
     virtual_text = {
@@ -13,30 +15,6 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
--- Autocomplete with lsp
-vim.opt.completeopt = {
-    "menu",
-    "menuone",
-    "popup",
-    "fuzzy",
-    "noselect",
-}
-
-vim.api.nvim_create_autocmd(
-    "LspAttach",
-    {
-        callback = function(args)
-            vim.lsp.completion.enable(
-                true,
-                args.data.client_id,
-                args.buf,
-                {
-                    autotrigger = true,
-                }
-            )
-        end
-    }
-)
 
 -- Golang LSP
 vim.lsp.config("gopls", {
@@ -89,6 +67,23 @@ vim.api.nvim_create_autocmd("FileType", {
     },
     callback = function(args)
         pcall(vim.lsp.enable("lua_ls"), args.buf)
+    end,
+})
+
+-- HTML LSP
+vim.lsp.config("html", {
+    cmd = { "vscode-html-language-server", "--stdio" },
+    filetypes = { "html" },
+    root_markers = { ".git" },
+    settings = {},
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "html",
+    },
+    callback = function(args)
+        pcall(vim.lsp.enable("html"), args.buf)
     end,
 })
 

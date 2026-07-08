@@ -26,3 +26,4 @@ alias ngc='nix-collect-garbage -d'
 alias rr='ranger'
 alias ls='lsd -1'
 alias k='kubectl'
+alias piwiki="cd $NOTE_DIR && pi"

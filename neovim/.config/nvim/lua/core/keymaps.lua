@@ -54,6 +54,16 @@ vim.keymap.set(
         expr = true
     }
 )
+
+vim.keymap.set(
+    "i",
+    "<C-Space>",
+    function()
+
+        vim.lsp.completion.get()
+
+    end
+)
 -- Move Winodes
 -- map("n", "<leader>hh", "<C-w>h", { desc = "Move Left" })
 -- map("n", "<leader>jj", "<C-w>j", { desc = "Move Down" })
@@ -69,3 +79,15 @@ vim.keymap.set(
 -- map("n", "<leader>ee", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 -- map("n", "<leader>ep", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
 -- map("n", "<leader>en", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
+-- Oil Open terminal in dir --
+vim.keymap.set("n", "<leader>ot", function()
+  local dir = require("oil").get_current_dir()
+  if not dir then
+    return
+  end
+
+  vim.cmd("belowright split")
+  vim.cmd.terminal({ cwd = dir })
+  vim.cmd.startinsert()
+end, { desc = "Terminal in Oil directory" })

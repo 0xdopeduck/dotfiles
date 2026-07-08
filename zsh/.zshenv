@@ -6,7 +6,7 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$HOME/go/bin:$PATH"
 export NOTE_DIR="~/Documents/Resources/Notes"
 export CLICOLOR=1
 export TERM=xterm-256color
@@ -38,6 +38,5 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 source $HOME/.config/zsh/alias
 source $HOME/.config/zsh/fzf-key-bindings.zsh
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
